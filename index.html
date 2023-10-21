@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <img src="#" alt="lowry logo">
+    <h1>Ticket Price Calculator</h1>
+    <form>
+        <fieldset class="setting">
+            <label for="venue">Venue: 
+                <select id="venue" name="venue">
+                    <option value="1">Lyric</option>
+                    <option value="2">Quays</option>
+                </select>
+            </label>
+            <label for="levy">Levy:  
+                <select id="levy" name="levy">
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </label>
+            <label for="booking-fee">Booking Fee: 
+                <select id="booking-fee" name="booking-fee">
+                    <option value="1">Inside</option>
+                    <option value="2">Outside</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <fieldset class="lyric lyric-original-price">
+            <p>Original Pirce</p>
+            <table>
+                <tr>
+                    <td><label for="sf-price">Stalls Front</label></td>
+                    <td>£ <input id="sf-price"></td>
+                </tr>
+                <tr>
+                    <td>Stalls Centre</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>Stalls Sides</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>Circle Centre</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>Circle RVs</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>Boxes</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>UC Front</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>UC Rear</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>UC RVs</td>
+                    <td>£ <input></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="lyric lyric-final-price">
+            <p>Final Price</p>
+            <table>
+                <tr>
+                    <td>Stalls Front</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Stalls Centre</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Stalls Sides</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Circle Centre</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Circle RVs</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Boxes</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>UC Front</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>UC Rear</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>UC RVs</td>
+                    <td>£</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="quays quays-original-price">
+            <p>Original Pirce</p>
+            <table>
+                <tr>
+                    <td><label for="a-price">Band A</label></td>
+                    <td>£ <input id="a-price"></td>
+                </tr>
+                <tr>
+                    <td>Band B</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>Band C</td>
+                    <td>£ <input></td>
+                </tr>
+                <tr>
+                    <td>Band D</td>
+                    <td>£ <input></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="quays quays-final-price">
+            <p>Final Price</p>
+            <table>
+                <tr>
+                    <td>Band A</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Band B</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Band C</td>
+                    <td>£</td>
+                </tr>
+                <tr>
+                    <td>Band D</td>
+                    <td>£</td>
+                </tr>
+            </table>
+        </fieldset>
+
+    </form>
+
+
+    
+</body>
+</html>
