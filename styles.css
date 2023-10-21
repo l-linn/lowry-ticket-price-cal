@@ -1,0 +1,15 @@
+label {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+table {
+    margin-inline: auto;
+}
