@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 label {
     display: block;
 }
@@ -6,10 +10,59 @@ h1 {
     text-align: center;
 }
 
-form {
-    text-align: center;
+table {
+    border: 1px solid;
+    border-collapse: collapse;
 }
 
-table {
+td {
+    border: 1px solid;
+}
+
+.area {
+    text-align: left;
+}
+
+input {
+    border: none;
+    width: 50px;
+}
+
+.price {
+    width: 80px;
+}
+
+.logo {
+    width: 25%;
+    max-width: 240px;
     margin-inline: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.setting {
+    text-align: center;
+    line-height: 2;
+}
+
+fieldset {
+    width: max-content;
+    margin-inline: auto;
+}
+
+.lyric {
+    display: grid;
+    max-width: 700px;
+    justify-content: center;
+}
+
+@media all and (min-width: 550px){
+    .lyric {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    }
+  }
+
+p {
+    text-align: center;
 }
