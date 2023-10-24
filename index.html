@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Calculator</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img src="img/the-lowry-logo-black.svg" alt="lowry logo" class="logo">
-    <h1>Ticket Price Calculator</h1>
+    <header>
+        <img src="img/logo-white.png" alt="lowry logo" class="logo">
+        
+    </header>
+
     <form>
         <fieldset class="setting">
+            <h1>Ticket Price Calculator</h1>
             <label for="venue">Venue: 
                 <select id="venue" name="venue">
                     <option value="1">Lyric</option>
@@ -30,8 +37,9 @@
                 </select>
             </label>
         </fieldset>
-        <div class="lyric">
-            <fieldset class="lyric-original-price">
+
+        <fieldset class="lyric">
+            <div class="lyric-o-p">
                 <p>Original Pirce</p>
                 <table>
                     <tr>
@@ -51,8 +59,12 @@
                         <td class="price">£ <input></td>
                     </tr>
                     <tr>
+                        <td class="area">Circle Sides</td>
+                        <td class="price">£ <input></td>
+                    </tr>
+                    <tr>
                         <td class="area">Circle RVs</td>
-                        <td>£ <input></td>
+                        <td class="price">£ <input></td>
                     </tr>
                     <tr>
                         <td class="area">Boxes</td>
@@ -71,100 +83,99 @@
                         <td class="price">£ <input></td>
                     </tr>
                 </table>
-            </fieldset>
-    
-            <fieldset class="lyric-final-price">
+            </div>
+            <div class="lyric-f-p">
                 <p>Final Price</p>
                 <table>
                     <tr>
                         <td class="area">Stalls Front</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">Stalls Centre</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">Stalls Sides</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">Circle Centre</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
+                    </tr>
+                    <tr>
+                        <td class="area">Circle Sides</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">Circle RVs</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">Boxes</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">UC Front</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">UC Rear</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                     <tr>
                         <td class="area">UC RVs</td>
-                        <td class="price">£</td>
+                        <td class="price">£ </td>
                     </tr>
                 </table>
-            </fieldset>
-        </div>
-
-
-
-        <fieldset class="quays quays-original-price">
-            <p>Original Pirce</p>
-            <table>
-                <tr>
-                    <td class="area"><label for="a-price">Band A</label></td>
-                    <td class="price">£ <input id="a-price"></td>
-                </tr>
-                <tr>
-                    <td class="area">Band B</td>
-                    <td class="price">£ <input></td>
-                </tr>
-                <tr>
-                    <td class="area">Band C</td>
-                    <td class="price">£ <input></td>
-                </tr>
-                <tr>
-                    <td class="area">Band D</td>
-                    <td class="price">£ <input></td>
-                </tr>
-            </table>
+            </div>
         </fieldset>
 
-        <fieldset class="quays quays-final-price">
-            <p>Final Price</p>
-            <table>
-                <tr>
-                    <td class="area">Band A</td>
-                    <td class="price">£</td>
-                </tr>
-                <tr>
-                    <td class="area">Band B</td>
-                    <td class="price">£</td>
-                </tr>
-                <tr>
-                    <td class="area">Band C</td>
-                    <td class="price">£</td>
-                </tr>
-                <tr>
-                    <td class="area">Band D</td>
-                    <td class="price">£</td>
-                </tr>
-            </table>
+        <fieldset class="quays">
+            <div class="quays-o-p">
+                <p>Original Pirce</p>
+                <table>
+                    <tr>
+                        <td class="area"><label for="a-price">Band A</label></td>
+                        <td class="price">£ <input id="a-price"></td>
+                    </tr>
+                    <tr>
+                        <td class="area">Band B</td>
+                        <td class="price">£ <input></td>
+                    </tr>
+                    <tr>
+                        <td class="area">Band C</td>
+                        <td class="price">£ <input></td>
+                    </tr>
+                    <tr>
+                        <td class="area">Band D</td>
+                        <td class="price">£ <input></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="quays-f-p">
+                <p>Final Price</p>
+                <table>
+                    <tr>
+                        <td class="area">Band A</td>
+                        <td class="price">£ </td>
+                    </tr>
+                    <tr>
+                        <td class="area">Band B</td>
+                        <td class="price">£ </td>
+                    </tr>
+                    <tr>
+                        <td class="area">Band C</td>
+                        <td class="price">£ </td>
+                    </tr>
+                    <tr>
+                        <td class="area">Band D</td>
+                        <td class="price">£ </td>
+                    </tr>
+                </table>
+            </div>
         </fieldset>
 
     </form>
-
-
-    
 </body>
 </html>
