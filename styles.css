@@ -1,15 +1,118 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
 * {
-    box-sizing: border-box;
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Alumni Sans', sans-serif;
+  background-color: gainsboro;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 
-label {
+/*my css starts*/
+
+
+/*header area*/
+header {
+    max-width: 700px;
+    margin-inline: auto;
+    background-color: orange;
+    color: snow;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 100px;
     display: block;
+    margin-inline: auto;
 }
 
 h1 {
     text-align: center;
+    margin: auto;
+    max-width: 700px;
 }
 
+/*form general*/
+label {
+    display: block;
+}
+
+p {
+    text-align: center;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    width: 60px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+fieldset {
+    border: none;
+}
+
+/*setting area*/
+.setting {
+    text-align: center;
+    line-height: 2;
+    margin: 10px auto;
+    background-color: skyblue;
+    color: snow;
+    max-width: 700px;
+    border-radius: 5px;
+}
+
+select {
+    background-color: transparent;
+    border-radius: 5px;
+    color: snow;
+    border: none;
+}
+
+/*price table*/
 table {
     border: 1px solid;
     border-collapse: collapse;
@@ -21,39 +124,27 @@ td {
 
 .area {
     text-align: left;
-}
-
-input {
-    border: none;
-    width: 50px;
+    padding: 0 5px;
 }
 
 .price {
-    width: 80px;
+    width: 90px;
+    padding-left: 10px;
 }
 
-.logo {
-    width: 25%;
-    max-width: 240px;
-    margin-inline: auto;
-    display: block;
-    margin-top: 20px;
-}
-
-.setting {
-    text-align: center;
-    line-height: 2;
-}
-
-fieldset {
-    width: max-content;
-    margin-inline: auto;
-}
-
-.lyric {
+.lyric,
+.quays,
+.lyric-o-p,
+.lyric-f-p,
+.quays-o-p,
+.quays-f-p {
     display: grid;
     max-width: 700px;
+    margin-inline: auto;
     justify-content: center;
+    background-color: snow;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 @media all and (min-width: 550px){
@@ -61,8 +152,8 @@ fieldset {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     }
+    .quays {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
   }
-
-p {
-    text-align: center;
-}
