@@ -12,16 +12,14 @@
 <body>
     <header>
         <img src="img/logo-white.png" alt="lowry logo" class="logo">
-        
+        <h1>Ticket Price Calculator</h1>
     </header>
-
     <form>
         <fieldset class="setting">
-            <h1>Ticket Price Calculator</h1>
             <label for="venue">Venue: 
                 <select id="venue" name="venue">
-                    <option value="1">Lyric</option>
-                    <option value="2">Quays</option>
+                    <option value="1" id="venue-lyric" class="venue-option">Lyric</option>
+                    <option value="2" id="venue-quays" class="venue-option">Quays</option>
                 </select>
             </label>
             <label for="levy">Levy:  
@@ -38,7 +36,7 @@
             </label>
         </fieldset>
 
-        <fieldset class="lyric">
+        <fieldset class="lyric is-visiable">
             <div class="lyric-o-p">
                 <p>Original Pirce</p>
                 <table>
@@ -131,7 +129,7 @@
             </div>
         </fieldset>
 
-        <fieldset class="quays">
+        <fieldset class="quays is-visiable">
             <div class="quays-o-p">
                 <p>Original Pirce</p>
                 <table>
@@ -175,7 +173,8 @@
                 </table>
             </div>
         </fieldset>
-
     </form>
+
+    <script src="script.js"></script>
 </body>
 </html>
