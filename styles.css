@@ -20,11 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Alumni Sans', sans-serif;
   background-color: darkslategray;
-  z-index: -1;
   font-weight: 600;
-  max-width: 600px;
-  margin: auto;
-  min-width: max-content;
 }
 /*
   5. Improve media defaults
@@ -53,23 +49,27 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /*my css starts*/
-
+.content {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*header area*/
 header {
   margin-inline: auto;
-  background-color: orange;
   color: snow;
-  margin-top: 30px;
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 150px;
   display: block;
   margin-inline: auto;
 }
 
 h1 {
+  font-size: 30px;
   text-align: center;
   margin-inline: auto;
   padding-bottom: 10px;
@@ -103,6 +103,8 @@ fieldset {
   margin: auto;
   background-color: skyblue;
   color: snow;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 select {
@@ -139,17 +141,22 @@ td {
 .quays-o-p,
 .quays-f-p {
   display: grid;
+  grid-gap: 20px;
   margin-inline: auto;
   justify-content: center;
-  background-color: ivory;
   color: darkslategray;
 }
 
 .lyric,
 .quays {
+  background-color: ivory;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
+.hidden {
+  display: none;
+}
 
 @media all and (min-width: 550px){
   .lyric {
