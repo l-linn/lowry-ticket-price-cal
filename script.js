@@ -1,13 +1,26 @@
-const venue = document.querySelector('#venue');
-console.log(venue);
+const venue = document.getElementById('venue');
+const quaysSection = document.querySelector('.quays');
+const lyricSection = document.querySelector('.lyric');
 
-console.log(venue.id);
+venue.addEventListener('change', function(){ //or toggle? can I use arrow function?
+    if(this.value == ''){
+        quaysSection.classList.add('hidden');
+        lyricSection.classList.add('hidden');
+    }else if (this.value == 1) {
+        quaysSection.classList.add('hidden');
+        lyricSection.classList.remove('hidden');
+    } else {
+        quaysSection.classList.remove('hidden');
+        lyricSection.classList.add('hidden');
+    }
+});
 
-const lyricVenue = document.getElementById('venue-lyric');
-console.log(lyricVenue);
+const levy = document.getElementById('levy');
+const bookingFee = document.getElementById('booking-fee');
 
-const venueOption = document.querySelector('.venue-option');
-console.log(venueOption);
-console.log(venueOption.value)
-
-venueOption.value == 1 ? console.log(venueOption.value): null;
+const stallFrontPrice = document.getElementById('sf-f-p');
+const inputPrice = document.querySelector('input');
+function updateValue(e){
+    stallFrontPrice.textContent = `£ ${e.target.value}`;
+}
+inputPrice.addEventListener('input', updateValue);
