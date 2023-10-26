@@ -19,7 +19,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Alumni Sans', sans-serif;
-  background-color: gainsboro;
+  background-color: darkslategray;
+  z-index: -1;
+  font-weight: 600;
+  max-width: 600px;
+  margin: auto;
+  min-width: max-content;
 }
 /*
   5. Improve media defaults
@@ -52,84 +57,79 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /*header area*/
 header {
-    max-width: 700px;
-    margin-inline: auto;
-    background-color: orange;
-    color: snow;
-    border-radius: 5px;
-    margin-top: 20px;
+  margin-inline: auto;
+  background-color: orange;
+  color: snow;
+  margin-top: 30px;
 }
 
 .logo {
-    max-width: 100px;
-    display: block;
-    margin-inline: auto;
+  max-width: 100px;
+  display: block;
+  margin-inline: auto;
 }
 
 h1 {
-    text-align: center;
-    margin: auto;
-    max-width: 700px;
+  text-align: center;
+  margin-inline: auto;
+  padding-bottom: 10px;
 }
 
 /*form general*/
 label {
-    display: block;
+  display: block;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 input {
-    border: none;
-    border-radius: 5px;
-    width: 60px;
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
+  border: none;
+  width: 60px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 /*setting area*/
 .setting {
-    text-align: center;
-    line-height: 2;
-    margin: 10px auto;
-    background-color: skyblue;
-    color: snow;
-    max-width: 700px;
-    border-radius: 5px;
+  text-align: center;
+  line-height: 2;
+  margin: auto;
+  background-color: skyblue;
+  color: snow;
 }
 
 select {
-    background-color: transparent;
-    border-radius: 5px;
-    color: snow;
-    border: none;
+  background-color: transparent;
+  color: snow;
+  border: none;
 }
 
 /*price table*/
 table {
-    border: 1px solid;
-    border-collapse: collapse;
+  border: 1px solid;
+  border-collapse: collapse;
 }
 
 td {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .area {
-    text-align: left;
-    padding: 0 5px;
+  text-align: left;
+  padding: 0 5px;
+  width: 100px;
 }
 
 .price {
-    width: 90px;
-    padding-left: 10px;
+  width: 100px;
+  padding-left: 10px;
 }
 
 .lyric,
@@ -138,22 +138,32 @@ td {
 .lyric-f-p,
 .quays-o-p,
 .quays-f-p {
-    display: grid;
-    max-width: 700px;
-    margin-inline: auto;
-    justify-content: center;
-    background-color: snow;
-    margin-bottom: 10px;
-    border-radius: 5px;
+  display: grid;
+  margin-inline: auto;
+  justify-content: center;
+  background-color: ivory;
+  color: darkslategray;
 }
 
+.lyric,
+.quays {
+  margin-bottom: 20px;
+}
+
+
 @media all and (min-width: 550px){
-    .lyric {
+  .lyric {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    }
-    .quays {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
   }
+  .quays {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media all and (max-width: 600px) {
+  header {
+    margin-top: 0;
+  }
+}
