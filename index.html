@@ -10,171 +10,176 @@
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="img/logo-white.png" alt="lowry logo" class="logo">
-        <h1>Ticket Price Calculator</h1>
-    </header>
-    <form>
-        <fieldset class="setting">
-            <label for="venue">Venue: 
-                <select id="venue" name="venue">
-                    <option value="1" id="venue-lyric" class="venue-option">Lyric</option>
-                    <option value="2" id="venue-quays" class="venue-option">Quays</option>
-                </select>
-            </label>
-            <label for="levy">Levy:  
-                <select id="levy" name="levy">
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>
-            </label>
-            <label for="booking-fee">Booking Fee: 
-                <select id="booking-fee" name="booking-fee">
-                    <option value="1">Inside</option>
-                    <option value="2">Outside</option>
-                </select>
-            </label>
-        </fieldset>
-
-        <fieldset class="lyric is-visiable">
-            <div class="lyric-o-p">
-                <p>Original Pirce</p>
-                <table>
-                    <tr>
-                        <td class="area"><label for="sf-price">Stalls Front</label></td>
-                        <td class="price">£ <input id="sf-price" placeholder="price"></td>
-                    </tr>
-                    <tr>
-                        <td class="area"><label for="sc-price">Stalls Centre</label></td>
-                        <td class="price">£ <input id="sc-price"></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Stalls Sides</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Circle Centre</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Circle Sides</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Circle RVs</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Boxes</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">UC Front</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">UC Rear</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">UC RVs</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="lyric-f-p">
-                <p>Final Price</p>
-                <table>
-                    <tr>
-                        <td class="area">Stalls Front</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Stalls Centre</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Stalls Sides</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Circle Centre</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Circle Sides</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Circle RVs</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Boxes</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">UC Front</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">UC Rear</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">UC RVs</td>
-                        <td class="price">£ </td>
-                    </tr>
-                </table>
-            </div>
-        </fieldset>
-
-        <fieldset class="quays is-visiable">
-            <div class="quays-o-p">
-                <p>Original Pirce</p>
-                <table>
-                    <tr>
-                        <td class="area"><label for="a-price">Band A</label></td>
-                        <td class="price">£ <input id="a-price"></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Band B</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Band C</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                    <tr>
-                        <td class="area">Band D</td>
-                        <td class="price">£ <input></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="quays-f-p">
-                <p>Final Price</p>
-                <table>
-                    <tr>
-                        <td class="area">Band A</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Band B</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Band C</td>
-                        <td class="price">£ </td>
-                    </tr>
-                    <tr>
-                        <td class="area">Band D</td>
-                        <td class="price">£ </td>
-                    </tr>
-                </table>
-            </div>
-        </fieldset>
-    </form>
-
+    <div class="content">
+        <header>
+            <img src="img/logo-white.png" alt="lowry logo" class="logo">
+            <h1>Ticket Price Calculator</h1>
+        </header>
+        <form>
+            <fieldset class="setting">
+                <label for="venue">Venue: 
+                    <select id="venue" name="venue">
+                        <option value="" >select</option>
+                        <option value="1" >Lyric</option>
+                        <option value="2" >Quays</option>
+                    </select>
+                </label>
+                <label for="levy">Levy:  
+                    <select id="levy" name="levy">
+                        <option value="">select</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </label>
+                <label for="booking-fee">Booking Fee: 
+                    <select id="booking-fee" name="booking-fee">
+                        <option value="">select</option>
+                        <option value="1">Inside</option>
+                        <option value="2">Outside</option>
+                    </select>
+                </label>
+            </fieldset>
+    
+            <fieldset class="lyric hidden">
+                <div class="lyric-o-p">
+                    <p>Original Pirce</p>
+                    <table>
+                        <tr>
+                            <td class="area"><label for="sf-o-p">Stalls Front</label></td>
+                            <td class="price">£ <input id="sf-o-p" placeholder="price"></td>
+                        </tr>
+                        <tr>
+                            <td class="area"><label for="sc-o-p">Stalls Centre</label></td>
+                            <td class="price">£ <input id="sc-o-p"></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Stalls Sides</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Circle Centre</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Circle Sides</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Circle RVs</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Boxes</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">UC Front</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">UC Rear</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">UC RVs</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="lyric-f-p">
+                    <p>Final Price</p>
+                    <table>
+                        <tr>
+                            <td class="area">Stalls Front</td>
+                            <td class="price" id="sf-f-p">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Stalls Centre</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Stalls Sides</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Circle Centre</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Circle Sides</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Circle RVs</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Boxes</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">UC Front</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">UC Rear</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">UC RVs</td>
+                            <td class="price">£ </td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+    
+            <fieldset class="quays hidden">
+                <div class="quays-o-p">
+                    <p>Original Pirce</p>
+                    <table>
+                        <tr>
+                            <td class="area"><label for="a-price">Band A</label></td>
+                            <td class="price">£ <input id="a-price"></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Band B</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Band C</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                        <tr>
+                            <td class="area">Band D</td>
+                            <td class="price">£ <input></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="quays-f-p">
+                    <p>Final Price</p>
+                    <table>
+                        <tr>
+                            <td class="area">Band A</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Band B</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Band C</td>
+                            <td class="price">£ </td>
+                        </tr>
+                        <tr>
+                            <td class="area">Band D</td>
+                            <td class="price">£ </td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
