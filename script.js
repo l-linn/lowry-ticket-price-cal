@@ -1,6 +1,13 @@
 const venue = document.getElementById('venue');
 const quaysSection = document.querySelector('.quays');
 const lyricSection = document.querySelector('.lyric');
+const inputValues = document.querySelector('input');
+const stallsFrontPrice = document.getElementById('sf-f-p');
+const levy = document.getElementById('levy');
+const bookingFee = document.getElementById('booking-fee');
+let addedOnLevy = 0;
+let addedOnBf = 0;
+
 function selectVenueForm (){
     if(venue.value == ''){
         quaysSection.classList.add('hidden');
@@ -15,29 +22,23 @@ function selectVenueForm (){
 }
 venue.addEventListener('change', selectVenueForm);
 
-
-const inputValues = document.querySelector('input');
-const stallsFrontPrice = document.getElementById('sf-f-p');
-function showPrice (input){
-    stallsFrontPrice.textContent = `£ ${Number(input.target.value)}`;
+function showPrice (e){
+    const outputPrice = `£ ${Number(e.target.value)}`;
+    stallsFrontPrice.textContent = outputPrice;
 }
 inputValues.addEventListener('input', showPrice);
 
-
-const levy = document.getElementById('levy');
-let addedOnLevy = 0;
 function selectLevyOption (){
     if(levy.value == 1){
         addedOnLevy += 1.5;
+    } else if (addedOnLevy >= 1.5 && levy.value == 1){
+        addedOnLevy = 1.5;
     } else {
         addedOnLevy = 0;
-    }
+    };
 }
 levy.addEventListener('change', selectLevyOption);
 
-
-const bookingFee = document.getElementById('booking-fee');
-let addedOnBf = 0;
 function selectBfOption (){ 
     if(bookingFee.value == 1){
         addedOnBf += 3;
@@ -46,10 +47,3 @@ function selectBfOption (){
     }
 }
 bookingFee.addEventListener('change', selectBfOption);
-
-
-
-
-
-
-
