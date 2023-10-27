@@ -8,7 +8,7 @@ const bookingFee = document.getElementById('booking-fee');
 let addedOnLevy = 0;
 let addedOnBf = 0;
 
-function selectVenueForm (){
+function selectVenueForm(){
     if(venue.value == ''){
         quaysSection.classList.add('hidden');
         lyricSection.classList.add('hidden');
@@ -20,15 +20,13 @@ function selectVenueForm (){
         lyricSection.classList.add('hidden');
     }
 }
-venue.addEventListener('change', selectVenueForm);
 
-function showPrice (e){
+function showPrice(e){
     const outputPrice = `£ ${Number(e.target.value)}`;
     stallsFrontPrice.textContent = outputPrice;
 }
-inputValues.addEventListener('input', showPrice);
 
-function selectLevyOption (){
+function selectLevyOption(){
     if(levy.value == 1){
         addedOnLevy += 1.5;
     } else if (addedOnLevy >= 1.5 && levy.value == 1){
@@ -37,13 +35,17 @@ function selectLevyOption (){
         addedOnLevy = 0;
     };
 }
-levy.addEventListener('change', selectLevyOption);
 
-function selectBfOption (){ 
+function selectBfOption(){ 
     if(bookingFee.value == 1){
         addedOnBf += 3;
     } else {
         addedOnBf = 0;
     }
 }
+
+venue.addEventListener('change', selectVenueForm);
+levy.addEventListener('change', selectLevyOption);
 bookingFee.addEventListener('change', selectBfOption);
+inputValues.addEventListener('input', showPrice);
+
