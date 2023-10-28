@@ -8,6 +8,8 @@ const bookingFee = document.getElementById('booking-fee');
 let addedOnLevy = 0;
 let addedOnBf = 0;
 
+lyricSection.classList.replace('hide', 'show');
+
 function selectVenueForm(){
     if(venue.value == ''){
         quaysSection.classList.add('hidden');
