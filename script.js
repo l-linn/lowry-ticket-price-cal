@@ -7,8 +7,25 @@ const levy = document.getElementById('levy');
 const bookingFee = document.getElementById('booking-fee');
 let addedOnLevy = 0;
 let addedOnBf = 0;
-
 lyricSection.classList.replace('hide', 'show');
+
+const originalPriceElement = document.getElementById('original-table');
+
+let originalPrice = [
+    {stallsFront: 0},{stallsCentre: 0}, {stallsSides: 0}
+];
+
+originalPrice.map((op)=> {
+    originalPriceElement.appendChild('<tr><td class="area"><label for="sf-o-p">Stalls Front</label></td><td class="price">£ <input id="sf-o-p" placeholder="price"></td></tr>');
+    console.log(op);
+})
+
+
+
+
+
+
+
 
 function selectVenueForm(){
     if(venue.value == ''){
